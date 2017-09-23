@@ -15,6 +15,7 @@ cache:
   - packages/react-scripts/node_modules
 install: true
 script:
+ - './tasks/test-fork.sh'
  - 'if [ $TEST_SUITE = "simple" ]; then tasks/e2e-simple.sh; fi'
  - 'if [ $TEST_SUITE = "installs" ]; then tasks/e2e-installs.sh; fi'
  - 'if [ $TEST_SUITE = "kitchensink" ]; then tasks/e2e-kitchensink.sh; fi'
