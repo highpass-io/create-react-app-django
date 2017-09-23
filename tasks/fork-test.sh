@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node packages/react-scripts/fork/test.js
+node packages/react-scripts/config/fork/test.js

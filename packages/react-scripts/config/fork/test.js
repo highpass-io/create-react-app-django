@@ -2,8 +2,8 @@
 
 'use strict';
 
-const reactScriptsPkg = require('../package.json');
-const reactDevUtilsPkg = require('../../react-dev-utils/package.json');
+const reactScriptsPkg = require('../../package.json');
+const reactDevUtilsPkg = require('../../../react-dev-utils/package.json');
 
 // As part of a workaround for websocket port in react-scripts,
 // we had to pull in a copy of a dependency from react-dev-utils, which
