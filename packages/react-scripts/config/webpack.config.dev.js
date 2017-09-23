@@ -26,7 +26,6 @@ const BundleTracker = require('webpack-bundle-tracker');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
-
 const publicPath = require('../fork/env').getPublicPath('dev');
 
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
