@@ -1,4 +1,4 @@
-// @remove-on-eject-begin
+// @remove-file-on-eject
 
 'use strict';
 

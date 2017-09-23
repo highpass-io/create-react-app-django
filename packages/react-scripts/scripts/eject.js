@@ -82,7 +82,8 @@ inquirer
       }
     }
 
-    const folders = ['config', 'config/jest', 'scripts'];
+    // Adding config/fork was custom to our django react scripts
+    const folders = ['config', 'config/jest', 'config/fork', 'scripts'];
 
     // Make shallow array of files paths
     const files = folders.reduce((files, folder) => {
