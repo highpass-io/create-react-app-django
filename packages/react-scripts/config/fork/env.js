@@ -1,9 +1,18 @@
 'use strict';
 
-function getPublicPath(env) {
+function getDevPublicPath() {
   const port = parseInt(process.env.PORT, 10) || 3000;
   const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
-  return env == 'dev' ? `${protocol}://localhost:${port}/` : '/';
+  const host = process.env.HOST || '0.0.0.0';
+  return `${protocol}://${host}:${port}/`;
 }
 
-module.exports = { getPublicPath };
+function getDevSocketHostname() {
+  return process.env.HOST || '0.0.0.0';
+}
+
+function getDevSocketPort() {
+  return parseInt(process.env.PORT, 10) || 3000;
+}
+
+module.exports = { getDevPublicPath, getDevSocketHostname, getDevSocketPort };
