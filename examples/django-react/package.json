@@ -8,9 +8,9 @@
     "react-loadable": "^4.0.5"
   },
   "scripts": {
-    "start": "BROWSER=false react-scripts start",
-    "build": "PUBLIC_URL=/static/ react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "BROWSER=false react-scripts-django start",
+    "build": "PUBLIC_URL=/static/ react-scripts-django build",
+    "test": "react-scripts-django test --env=jsdom",
+    "eject": "react-scripts-django eject"
   }
 }
