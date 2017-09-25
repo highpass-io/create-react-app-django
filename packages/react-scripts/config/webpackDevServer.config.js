@@ -98,5 +98,9 @@ module.exports = function(proxy, allowedHost) {
       // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware());
     },
+    // Add CORS headers to work around HMR json update error in the development server.
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   };
 };

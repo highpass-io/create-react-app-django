@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
+import Loadable from 'react-loadable';
 import logo from './logo.svg';
 import './App.css';
+
+function Loading() {
+  return (
+    <div className="Loading">
+      <p className="Loading-intro">Loading component via code-splitting...</p>
+    </div>
+  );
+}
+
+const CodeSplitLoadable = Loadable({
+  loader: () => import('./CodeSplit'),
+  loading: Loading,
+});
 
 class App extends Component {
   render() {
@@ -13,6 +27,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <CodeSplitLoadable />
       </div>
     );
   }
